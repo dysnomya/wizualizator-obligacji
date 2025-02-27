@@ -3,7 +3,7 @@ package com.github.dysnomya.wizualizatorobligacji;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class WizualizatorObligacjiController {
     @FXML
     private Label welcomeText;
 
