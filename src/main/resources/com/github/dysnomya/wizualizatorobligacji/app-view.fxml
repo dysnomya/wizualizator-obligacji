@@ -3,15 +3,34 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.github.dysnomya.wizualizatorobligacji.WizualizatorObligacjiController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-  <Button text="aaaaaaaaaaaaaaaa" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.github.dysnomya.wizualizatorobligacji.WizualizatorObligacjiController">
+
+    <left>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <Label fx:id="welcomeText"/>
+            <Button text="Hello!" onAction="#onHelloButtonClick"/>
+        </VBox>
+    </left>
+
+    <center>
+        <LineChart fx:id="lineChart">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" label="Time"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Value"/>
+            </yAxis>
+        </LineChart>
+    </center>
+</BorderPane>
+
