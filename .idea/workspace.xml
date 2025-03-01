@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="General changes to UI - user can choose either to start from non-invested funds or use an existing bond">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/BondDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/MongoDBConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacji.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Obligacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Bond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +21,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
