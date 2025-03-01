@@ -5,32 +5,39 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
 
+import java.io.IOException;
+
 public class MainLayoutController {
 
     @FXML
     private Pane contentPane;
 
+    private Parent appView;
+    private Parent databaseView;
+
     @FXML
     public void initialize() {
+        try {
+            appView = FXMLLoader.load(getClass().getResource("app-view.fxml"));
+            databaseView = FXMLLoader.load(getClass().getResource("database-view.fxml"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         loadChartView();
     }
 
     @FXML
     public void loadChartView() {
-        loadView("app-view.fxml");
+        loadView(appView);
     }
 
     @FXML
     public void loadDatabaseView() {
-        loadView("database-view.fxml");
+        loadView(databaseView);
     }
 
-    private void loadView(String fxmlFile) {
-        try {
-            Parent view = FXMLLoader.load(getClass().getResource(fxmlFile));
-            contentPane.getChildren().setAll(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    private void loadView(Parent view) {
+        contentPane.getChildren().setAll(view);
     }
 }
