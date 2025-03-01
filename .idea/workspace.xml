@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Add menu navigation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/ChartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Obligacja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/chart.fxml" afterDir="false" />
+    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="General changes to UI - user can choose either to start from non-invested funds or use an existing bond">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/BondDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/MongoDBConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/MainLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/MainLayoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacji.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Obligacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Bond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -106,7 +109,8 @@
       <workItem from="1740678007633" duration="2296000" />
       <workItem from="1740739996450" duration="13478000" />
       <workItem from="1740764475485" duration="1283000" />
-      <workItem from="1740831970405" duration="6511000" />
+      <workItem from="1740831970405" duration="8838000" />
+      <workItem from="1740845714061" duration="9835000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <option name="closed" value="true" />
@@ -140,7 +144,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740746080185</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change layout switching so that it doesn't load completely new file evey time it's switched">
+      <option name="closed" value="true" />
+      <created>1740838586212</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740838586212</updated>
+    </task>
+    <task id="LOCAL-00006" summary="General changes to UI - user can choose either to start from non-invested funds or use an existing bond">
+      <option name="closed" value="true" />
+      <created>1740838654788</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740838654788</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +170,18 @@
     <MESSAGE value="Initialize project" />
     <MESSAGE value="Name refactoring" />
     <MESSAGE value="Add menu navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add menu navigation" />
+    <MESSAGE value="Change layout switching so that it doesn't load completely new file evey time it's switched" />
+    <MESSAGE value="General changes to UI - user can choose either to start from non-invested funds or use an existing bond" />
+    <option name="LAST_COMMIT_MESSAGE" value="General changes to UI - user can choose either to start from non-invested funds or use an existing bond" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
