@@ -32,23 +32,4 @@ public class WizualizatorObligacjiController {
 
     }
 
-    @FXML
-    public void toggleOptions() {
-        newInvestmentOptions.setVisible(newInvestment.isSelected());
-        newInvestmentOptions.setManaged(newInvestment.isSelected());
-        alreadyInvestedOptions.setVisible(alreadyInvested.isSelected());
-        alreadyInvestedOptions.setManaged(alreadyInvested.isSelected());
-    }
-
-
-//    private XYChart.Series<Number, Number> createNewSeries() {
-//        XYChart.Series<Number, Number> series = new XYChart.Series<>();
-//        series.setName("Wartość obligacji w czasie");
-//
-//        for (int i = 0; i < timeValue; i++) {
-//            series.getData().add(new XYChart.Data<>(i, bondAmountValue * 100));
-//        }
-//
-//        return series;
-//    }
 }

@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.github.dysnomya.wizualizatorobligacji.DatabaseViewController"
-      spacing="20.0">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.dysnomya.wizualizatorobligacji.DatabaseViewController">
+    <left>
+        <VBox spacing="20.0">
 
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
 
-    <VBox>
-        <Label text="Nazwa obligacji:"/>
-        <TextField fx:id="idField"/>
-    </VBox>
+            <HBox spacing="10.0">
+                <Label text="Nazwa obligacji:" />
+                <TextField fx:id="idField" />
+            </HBox>
 
-    <VBox>
-        <Label text="Koszt przedwczesnego wykupienia:"/>
-        <TextField fx:id="earlyRedemptionCostField"/>
-    </VBox>
+            <HBox spacing="10.0">
+                <Label text="Koszt przedwczesnego wykupienia:" />
+                <TextField fx:id="earlyRedemptionCostField" />
+            </HBox>
 
-    <VBox>
-        <Label text="Oprocentowanie:"/>
-        <TextField fx:id="interestRateField"/>
-    </VBox>
+            <HBox spacing="10.0">
+                <Label text="Oprocentowanie:" />
+                <TextField fx:id="interestRateField" />
+            </HBox>
 
-    <Button text="Save" onAction="#handleSaveBond"/>
-</VBox>
+            <Button onAction="#handleSaveBond" text="Save" />
+        </VBox>
+    </left>
+
+    <center>
+        <ListView fx:id="listView" />
+    </center>
+</BorderPane>

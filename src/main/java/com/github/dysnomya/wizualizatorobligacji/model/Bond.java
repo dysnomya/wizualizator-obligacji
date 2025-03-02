@@ -22,6 +22,10 @@ public abstract class Bond {
         this.earlyRedemptionPrice = earlyRedemptionPrice;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public Document toDocument() {
         return new Document("id", id)
                 .append("earlyRedemptionPrice", earlyRedemptionPrice)

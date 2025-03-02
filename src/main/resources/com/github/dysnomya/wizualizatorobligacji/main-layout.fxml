@@ -6,20 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.github.dysnomya.wizualizatorobligacji.MainLayoutController">
+<TabPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
 
-    <!-- Top Menu -->
-    <top>
-        <ToolBar>
-            <Button text="Show Chart" onAction="#loadChartView"/>
-            <Button text="Manage Database" onAction="#loadDatabaseView"/>
-        </ToolBar>
-    </top>
-
-    <!-- Dynamic Content -->
-    <center>
-        <Pane fx:id="contentPane"/>
-    </center>
-</BorderPane>
+    <Tab text="Show Chart">
+        <fx:include source="app-view.fxml"/>
+    </Tab>
+    <Tab text="Manage Database">
+        <fx:include source="database-view.fxml"/>
+    </Tab>
+</TabPane>

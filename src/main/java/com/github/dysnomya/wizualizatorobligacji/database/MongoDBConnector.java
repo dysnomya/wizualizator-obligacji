@@ -15,7 +15,6 @@ public class MongoDBConnector {
             mongoClient = MongoClients.create(CONNECTION_STRING);
             database = mongoClient.getDatabase("wizualizator_obligacji");
             System.out.println("Connected to MongoDB!");
-            System.out.println(database);
         } catch (MongoException e) {
             e.printStackTrace();
         }
