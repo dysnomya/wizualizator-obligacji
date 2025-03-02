@@ -18,4 +18,8 @@ public class TOS extends Bond {
         return super.toDocument().append("interestRate", interestRate);
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +  ", oprocentowanie: " + interestRate;
+    }
 }
