@@ -32,6 +32,6 @@
     </left>
 
     <center>
-        <fx:include source="list-view.fxml"/>
+        <fx:include source="list-view.fxml" fx:id="listView"/>
     </center>
 </BorderPane>

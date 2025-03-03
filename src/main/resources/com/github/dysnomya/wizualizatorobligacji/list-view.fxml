@@ -7,10 +7,22 @@
 <?import javafx.scene.layout.*?>
 
 
-<TabPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.github.dysnomya.wizualizatorobligacji.ListViewController">
-    <Tab text="TOS">
-        <ListView fx:id="tosBonds"/>
-    </Tab>
-</TabPane>
+    <center>
+        <TabPane>
+            <Tab text="TOS">
+                <ListView fx:id="tosBonds"/>
+            </Tab>
+        </TabPane>
+
+    </center>
+
+    <right>
+        <ToolBar orientation="VERTICAL" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" text="Refresh" onAction="#setListView"/>
+        </ToolBar>
+
+    </right>
+</BorderPane>

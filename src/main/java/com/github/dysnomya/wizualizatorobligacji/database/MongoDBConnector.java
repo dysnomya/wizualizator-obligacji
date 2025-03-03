@@ -27,6 +27,7 @@ public class MongoDBConnector {
     public static void close() {
         if (mongoClient != null) {
             mongoClient.close();
+            System.out.println("Closed connection to MongoDB!");
         }
     }
 }

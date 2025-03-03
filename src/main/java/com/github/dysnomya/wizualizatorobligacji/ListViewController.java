@@ -1,5 +1,6 @@
 package com.github.dysnomya.wizualizatorobligacji;
 
+import com.github.dysnomya.wizualizatorobligacji.database.BondDAO;
 import com.github.dysnomya.wizualizatorobligacji.model.Bond;
 import com.github.dysnomya.wizualizatorobligacji.model.TOS;
 import javafx.collections.FXCollections;
@@ -16,18 +17,18 @@ import java.util.ArrayList;
 
 public class ListViewController {
     @FXML private   ListView                tosBonds;
-    private         List<Bond>              bondList     = new ArrayList<>(5);
     private         ObservableList<Bond>  names = FXCollections.observableArrayList();
 
     public void setListView() {
-        bondList.add(new TOS("TOS1212", 1, 2));
 
-        names.setAll(bondList);
-        tosBonds.setItems(names);
+        List<Bond> bonds = BondDAO.getBonds("TOS");
+
+        names.setAll(bonds);
     }
 
     @FXML
     public void initialize() {
+        tosBonds.setItems(names);
         setListView();
     }
 
