@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Updated listView so it shows bond values">
+    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Added button for refreshing List View for bonds in database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/ListViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/ListViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/BondDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/BondDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/MongoDBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/MongoDBConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/list-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/ChartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/chart.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <workItem from="1740845714061" duration="9835000" />
       <workItem from="1740910077715" duration="6063000" />
       <workItem from="1740916178820" duration="5763000" />
-      <workItem from="1741018024444" duration="4548000" />
+      <workItem from="1741018024444" duration="7783000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <option name="closed" value="true" />
@@ -197,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740918743952</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added button for refreshing List View for bonds in database">
+      <option name="closed" value="true" />
+      <created>1741023136038</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741023136038</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +218,8 @@
     <MESSAGE value="Added foundations of adding bonds to database - MongoDB" />
     <MESSAGE value="Layout update - deleted what is not needed" />
     <MESSAGE value="Updated listView so it shows bond values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated listView so it shows bond values" />
+    <MESSAGE value="Added button for refreshing List View for bonds in database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added button for refreshing List View for bonds in database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

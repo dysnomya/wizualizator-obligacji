@@ -4,6 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
             fx:controller="com.github.dysnomya.wizualizatorobligacji.WizualizatorObligacjiController">
 
@@ -17,7 +19,7 @@
             <Label text="1. Wybierz źródło kapitału"/>
             <Accordion>
                 <panes>
-                    <TitledPane animated="false" text="Nowa inwestycja">
+                    <TitledPane fx:id="newInvestment" animated="false" text="Nowa inwestycja">
                         <content>
                             <HBox>
                                 <Label text="Wartość kapitału:"/>
@@ -26,7 +28,7 @@
                             </HBox>
                         </content>
                     </TitledPane>
-                    <TitledPane animated="false" text="Przenieś obligację">
+                    <TitledPane fx:id="alreadyInvested" animated="false" text="Przenieś obligację">
                         <content>
                             <HBox>
                                 <Label text="Select investment:"/>
@@ -37,10 +39,20 @@
                     </TitledPane>
                 </panes>
             </Accordion>
+            <Label text="2. Do sth more..."/>
+
+            <Button fx:id="generateChart" text="Wygeneruj wykres" onAction="#generateChart"/>
         </VBox>
     </left>
 
     <center>
-        <fx:include source="chart.fxml"/>
+        <LineChart fx:id="lineChart" createSymbols="false">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" label="Czas"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Wartość" forceZeroInRange="false"/>
+            </yAxis>
+        </LineChart>
     </center>
 </BorderPane>
