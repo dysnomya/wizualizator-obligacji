@@ -33,10 +33,10 @@ public abstract class Bond {
                 .append("issueTo", issueTo);
     }
 
+    public abstract double getInterestRate();
+
     @Override
     public String toString() {
-        return id +
-                " [" + issueFrom.getMonth() + " " + issueFrom.getYear() +
-                "], cena przedterminowego wykupu: " + earlyRedemptionPrice;
+        return id;
     }
 }

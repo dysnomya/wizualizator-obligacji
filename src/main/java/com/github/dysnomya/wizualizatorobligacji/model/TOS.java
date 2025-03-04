@@ -19,7 +19,12 @@ public class TOS extends Bond {
     }
 
     @Override
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    @Override
     public String toString() {
-        return super.toString() +  ", oprocentowanie: " + interestRate;
+        return super.toString() +  ", oprocentowanie: " + interestRate + "%";
     }
 }

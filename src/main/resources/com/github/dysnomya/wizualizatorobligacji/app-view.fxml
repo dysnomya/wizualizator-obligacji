@@ -24,17 +24,25 @@
                             <HBox>
                                 <Label text="Wartość kapitału:"/>
                                 <TextField fx:id="amountField"/>
-                                <Button onAction="#handleNewInvestment" text="Confirm"/>
                             </HBox>
                         </content>
                     </TitledPane>
-                    <TitledPane fx:id="alreadyInvested" animated="false" text="Przenieś obligację">
+                    <TitledPane fx:id="alreadyInvested" animated="false" text="Przenieś obligację" onMouseClicked="#initDropdown">
                         <content>
-                            <HBox>
-                                <Label text="Select investment:"/>
-                                <ComboBox fx:id="investmentDropdown"/>
-                                <Button text="Edit"/>
-                            </HBox>
+                            <VBox>
+                                <HBox>
+                                    <Label text="Wybierz obligację:"/>
+                                    <ComboBox fx:id="investmentDropdown"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Liczba wykupionych obligacji:"/>
+                                    <TextField fx:id="bondCount"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Data zakupienia obligacji:"/>
+                                    <DatePicker fx:id="bondDate"/>
+                                </HBox>
+                            </VBox>
                         </content>
                     </TitledPane>
                 </panes>
