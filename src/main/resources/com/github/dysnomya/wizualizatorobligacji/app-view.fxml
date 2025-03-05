@@ -6,6 +6,7 @@
 
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
             fx:controller="com.github.dysnomya.wizualizatorobligacji.WizualizatorObligacjiController">
 
@@ -29,16 +30,16 @@
                     </TitledPane>
                     <TitledPane fx:id="alreadyInvested" animated="false" text="Przenieś obligację" onMouseClicked="#initDropdown">
                         <content>
-                            <VBox>
-                                <HBox>
+                            <VBox spacing="10">
+                                <HBox spacing="10">
                                     <Label text="Wybierz obligację:"/>
-                                    <ComboBox fx:id="investmentDropdown"/>
+                                    <ComboBox fx:id="investmentDropdown" onAction="#setBondDate"/>
                                 </HBox>
-                                <HBox>
+                                <HBox spacing="10">
                                     <Label text="Liczba wykupionych obligacji:"/>
                                     <TextField fx:id="bondCount"/>
                                 </HBox>
-                                <HBox>
+                                <HBox spacing="10">
                                     <Label text="Data zakupienia obligacji:"/>
                                     <DatePicker fx:id="bondDate"/>
                                 </HBox>
@@ -56,7 +57,7 @@
     <center>
         <LineChart fx:id="lineChart" createSymbols="false">
             <xAxis>
-                <NumberAxis fx:id="xAxis" label="Czas"/>
+                <CategoryAxis fx:id="xAxis" label="Czas" />
             </xAxis>
             <yAxis>
                 <NumberAxis fx:id="yAxis" label="Wartość" forceZeroInRange="false"/>

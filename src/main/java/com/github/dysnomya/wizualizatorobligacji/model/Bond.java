@@ -7,18 +7,10 @@ import java.time.LocalDate;
 
 public abstract class Bond {
     private String id;
-    private LocalDate issueFrom;
-    private LocalDate issueTo;
-
     private double earlyRedemptionPrice;
 
     public Bond(String id, double earlyRedemptionPrice) {
-        int year = 1997 + Integer.parseInt(id.substring(5, 7));
-        int month = Integer.parseInt(id.substring(3, 5));
-
         this.id = id;
-        this.issueFrom = LocalDate.of(year, month, 1);
-        this.issueTo = LocalDate.of(year, month, this.issueFrom.lengthOfMonth());
         this.earlyRedemptionPrice = earlyRedemptionPrice;
     }
 
@@ -26,11 +18,21 @@ public abstract class Bond {
         return id;
     }
 
+    public int getMonth() {
+        return Integer.parseInt(id.substring(3, 5));
+    }
+
+    public int getYear() {
+        if (id.startsWith("TOS")) {
+            return Integer.parseInt(id.substring(5, 7)) + 1997;
+        }
+
+        return 0;
+    }
+
     public Document toDocument() {
         return new Document("id", id)
-                .append("earlyRedemptionPrice", earlyRedemptionPrice)
-                .append("issueFrom", issueFrom)
-                .append("issueTo", issueTo);
+                .append("earlyRedemptionPrice", earlyRedemptionPrice);
     }
 
     public abstract double getInterestRate();

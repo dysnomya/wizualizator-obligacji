@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Added generation of simple chart!">
+    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Updated adding already invested bond">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Bond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Bond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +114,8 @@
       <workItem from="1740916178820" duration="5763000" />
       <workItem from="1741018024444" duration="8002000" />
       <workItem from="1741106239394" duration="1735000" />
-      <workItem from="1741109979842" duration="4831000" />
+      <workItem from="1741109979842" duration="4880000" />
+      <workItem from="1741195811050" duration="6207000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <option name="closed" value="true" />
@@ -214,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741026451306</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated adding already invested bond">
+      <option name="closed" value="true" />
+      <created>1741116781884</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741116781884</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +238,8 @@
     <MESSAGE value="Updated listView so it shows bond values" />
     <MESSAGE value="Added button for refreshing List View for bonds in database" />
     <MESSAGE value="Added generation of simple chart!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added generation of simple chart!" />
+    <MESSAGE value="Updated adding already invested bond" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated adding already invested bond" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
