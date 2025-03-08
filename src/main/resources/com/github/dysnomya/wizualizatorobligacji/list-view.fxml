@@ -9,7 +9,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.github.dysnomya.wizualizatorobligacji.ListViewController">
+            fx:controller="com.github.dysnomya.wizualizatorobligacji.controllers.ListViewController">
     <center>
         <TabPane>
             <Tab text="TOS">
@@ -21,7 +21,8 @@
 
     <right>
         <ToolBar orientation="VERTICAL" BorderPane.alignment="CENTER">
-            <Button mnemonicParsing="false" text="Refresh" onAction="#setListView"/>
+            <Button text="Refresh" onAction="#setListView"/>
+            <Button text="Load API" onAction="#loadFromAPI"/>
         </ToolBar>
 
     </right>

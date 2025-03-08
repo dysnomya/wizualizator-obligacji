@@ -8,7 +8,7 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.CategoryAxis?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
-            fx:controller="com.github.dysnomya.wizualizatorobligacji.WizualizatorObligacjiController">
+            fx:controller="com.github.dysnomya.wizualizatorobligacji.controllers.WizualizatorObligacjiController">
 
     <left>
         <VBox spacing="20.0">
@@ -28,7 +28,7 @@
                             </HBox>
                         </content>
                     </TitledPane>
-                    <TitledPane fx:id="alreadyInvested" animated="false" text="Przenieś obligację" onMouseClicked="#initDropdown">
+                    <TitledPane fx:id="alreadyInvested" animated="false" text="Istniejąca obligacja" onMouseClicked="#initDropdown">
                         <content>
                             <VBox spacing="10">
                                 <HBox spacing="10">

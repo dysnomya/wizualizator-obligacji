@@ -1,11 +1,9 @@
-package com.github.dysnomya.wizualizatorobligacji;
+package com.github.dysnomya.wizualizatorobligacji.controllers;
 
 import com.github.dysnomya.wizualizatorobligacji.database.BondDAO;
 import com.github.dysnomya.wizualizatorobligacji.model.Bond;
 import com.github.dysnomya.wizualizatorobligacji.model.TOS;
-import com.github.dysnomya.wizualizatorobligacji.ListViewController;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 public class DatabaseViewController {
@@ -27,4 +25,5 @@ public class DatabaseViewController {
         Bond bond = new TOS(id, earlyRedemptionCost, interestRate);
         BondDAO.addBond(bond);
     }
+
 }
