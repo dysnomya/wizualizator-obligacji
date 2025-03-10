@@ -25,6 +25,6 @@ public class TOS extends Bond {
 
     @Override
     public String toString() {
-        return super.toString() +  ", " + interestRate + "%";
+        return super.toString() +  ", " + (double) Math.round(interestRate * 10000) / 100 + "%";
     }
 }

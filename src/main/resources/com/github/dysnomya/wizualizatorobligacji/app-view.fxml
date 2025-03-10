@@ -7,6 +7,8 @@
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.text.Text?>
+<?import com.sun.javafx.scene.control.CustomColorDialog.ControlsPane?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
             fx:controller="com.github.dysnomya.wizualizatorobligacji.controllers.WizualizatorObligacjiController">
 
@@ -17,38 +19,19 @@
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
 
-            <Label text="1. Wybierz źródło kapitału"/>
-            <Accordion>
-                <panes>
-                    <TitledPane fx:id="newInvestment" animated="false" text="Nowa inwestycja">
-                        <content>
-                            <HBox>
-                                <Label text="Wartość kapitału:"/>
-                                <TextField fx:id="amountField"/>
-                            </HBox>
-                        </content>
-                    </TitledPane>
-                    <TitledPane fx:id="alreadyInvested" animated="false" text="Istniejąca obligacja" onMouseClicked="#initDropdown">
-                        <content>
-                            <VBox spacing="10">
-                                <HBox spacing="10">
-                                    <Label text="Wybierz obligację:"/>
-                                    <ComboBox fx:id="investmentDropdown" onAction="#setBondDate"/>
-                                </HBox>
-                                <HBox spacing="10">
-                                    <Label text="Liczba wykupionych obligacji:"/>
-                                    <TextField fx:id="bondCount"/>
-                                </HBox>
-                                <HBox spacing="10">
-                                    <Label text="Data zakupienia obligacji:"/>
-                                    <DatePicker fx:id="bondDate"/>
-                                </HBox>
-                            </VBox>
-                        </content>
-                    </TitledPane>
-                </panes>
-            </Accordion>
-            <Label text="2. Do sth more..."/>
+            <HBox spacing="10">
+                <Label text="Wartość kapitału:"/>
+                <TextField fx:id="amountField"/>
+            </HBox>
+
+            <Separator/>
+
+            <Accordion fx:id="bondAccordion"/>
+
+            <Button text="DODAJ OBLIGACJĘ DO WYKRESU" onAction="#addNewBond"/>
+
+            <Separator/>
+
 
             <Button fx:id="generateChart" text="Wygeneruj wykres" onAction="#generateChart"/>
         </VBox>

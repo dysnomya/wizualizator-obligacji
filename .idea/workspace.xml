@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Update chart so that its one axis is a date and not integer">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/XMLFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Added functionality to read published XML file to DB">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/BondViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/bond-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/DatabaseViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/DatabaseViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/ListViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/ListViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacjiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/WizualizatorObligacjiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/WizualizatorObligacji.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/WizualizatorObligacjiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/WizualizatorObligacjiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/app-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/database-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/list-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="FxmlFile" />
         <option value="Python Script" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -48,12 +41,12 @@
     &quot;assignee&quot;: &quot;dysnomya&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/dysnomya/wizualizator-obligacji.git",
-    "accountId": "95bccfb3-786a-4499-8adb-39ed51b2b74e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dysnomya/wizualizator-obligacji.git&quot;,
+    &quot;accountId&quot;: &quot;95bccfb3-786a-4499-8adb-39ed51b2b74e&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -136,6 +129,8 @@
       <workItem from="1741195811050" duration="6264000" />
       <workItem from="1741432030564" duration="1102000" />
       <workItem from="1741433291291" duration="5171000" />
+      <workItem from="1741541888924" duration="4143000" />
+      <workItem from="1741635278903" duration="5498000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <option name="closed" value="true" />
@@ -249,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741202082376</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added functionality to read published XML file to DB">
+      <option name="closed" value="true" />
+      <created>1741466555227</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741466555227</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +271,8 @@
     <MESSAGE value="Added generation of simple chart!" />
     <MESSAGE value="Updated adding already invested bond" />
     <MESSAGE value="Update chart so that its one axis is a date and not integer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update chart so that its one axis is a date and not integer" />
+    <MESSAGE value="Added functionality to read published XML file to DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to read published XML file to DB" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wizualizator_obligacji$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1741439459834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python" />

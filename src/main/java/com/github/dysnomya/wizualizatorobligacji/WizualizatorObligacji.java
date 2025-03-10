@@ -14,7 +14,7 @@ public class WizualizatorObligacji extends Application {
         MongoDBConnector.connect();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("main-layout.fxml"));
 
-        Scene scene = new Scene(loader.load(), 1024, 768);
+        Scene scene = new Scene(loader.load(), 1366, 768);
         stage.setTitle("Wizualizator Obligacji");
         stage.setScene(scene);
         stage.show();
