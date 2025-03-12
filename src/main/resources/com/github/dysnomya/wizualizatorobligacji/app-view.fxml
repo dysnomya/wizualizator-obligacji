@@ -40,7 +40,7 @@
     <center>
         <LineChart fx:id="lineChart" createSymbols="false">
             <xAxis>
-                <CategoryAxis fx:id="xAxis" label="Czas" />
+                <NumberAxis fx:id="xAxis" label="Czas" />
             </xAxis>
             <yAxis>
                 <NumberAxis fx:id="yAxis" label="Wartość" forceZeroInRange="false"/>
