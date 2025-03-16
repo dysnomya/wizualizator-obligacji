@@ -19,6 +19,7 @@ import javafx.scene.control.*;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
 
 public class WizualizatorObligacjiController {
 
@@ -34,6 +35,17 @@ public class WizualizatorObligacjiController {
 
     @FXML
     private Accordion bondAccordion;
+
+    @FXML
+    private void initialize() {
+        xAxis.setTickLabelFormatter(new NumberAxis.DefaultFormatter(xAxis) {
+            @Override
+            public String toString(Number number) {
+                LocalDate date = LocalDate.of(1970, 1, 1).plusDays(Math.round((double) number));
+                return date.toString();
+            }
+        });
+    }
 
 
     @FXML
@@ -56,7 +68,7 @@ public class WizualizatorObligacjiController {
             int count = controller.getCount();
             LocalDate date = controller.getDate();
 
-            XYChart.Series<Long, Double> series = createNewSeries(100.0 * count, bond.getInterestRate(), date);
+            XYChart.Series<Long, Double> series = createNewSeries(100.0 * count, bond.getInterestRate(), date, bond.getTime());
             series.setName(bond.getId());
 
             lineChart.getData().add(series);
@@ -65,19 +77,19 @@ public class WizualizatorObligacjiController {
 
 
 
-    private XYChart.Series<Long, Double> createNewSeries(double base, double interestValue, LocalDate startingDate) {
+    private XYChart.Series<Long, Double> createNewSeries(double base, double interestValue, LocalDate startingDate, int days) {
         XYChart.Series<Long, Double> series = new XYChart.Series<>();
 
         // TODO: ADD FORMATTER
         long minDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate);
-        long maxDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate.plusDays(365));
+        long maxDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate.plusDays(days));
         long range = maxDate - minDate;
 
         for (int i = 0; i < range; i++) {
             double value = base + ((double) i / 365) * (interestValue) * base;
             series.getData().add(new XYChart.Data<>(minDate + i, value));
 
-            startingDate = startingDate.plusDays(1);
+//            startingDate = startingDate.plusDays(1);
         }
         return series;
     }

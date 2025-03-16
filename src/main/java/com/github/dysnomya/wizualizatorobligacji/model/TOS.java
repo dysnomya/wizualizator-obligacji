@@ -10,7 +10,7 @@ public class TOS extends Bond {
     private double interestRate;
 
     public TOS(String id, double earlyRedemptionPrice, double interestRate) {
-        super(id, earlyRedemptionPrice);
+        super(id, earlyRedemptionPrice, 365 * 3);
         this.interestRate = interestRate;
     }
 

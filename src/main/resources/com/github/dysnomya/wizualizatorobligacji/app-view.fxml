@@ -32,6 +32,8 @@
 
             <Separator/>
 
+            <Label text="Disclaimer: wartości przybliżone"/>
+
 
             <Button fx:id="generateChart" text="Wygeneruj wykres" onAction="#generateChart"/>
         </VBox>
@@ -40,7 +42,7 @@
     <center>
         <LineChart fx:id="lineChart" createSymbols="false">
             <xAxis>
-                <NumberAxis fx:id="xAxis" label="Czas" />
+                <NumberAxis fx:id="xAxis" label="Czas" forceZeroInRange="false"/>
             </xAxis>
             <yAxis>
                 <NumberAxis fx:id="yAxis" label="Wartość" forceZeroInRange="false"/>

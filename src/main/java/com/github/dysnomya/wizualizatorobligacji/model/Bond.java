@@ -8,10 +8,12 @@ import java.time.LocalDate;
 public abstract class Bond {
     private String id;
     private double earlyRedemptionPrice;
+    private int time;
 
-    public Bond(String id, double earlyRedemptionPrice) {
+    public Bond(String id, double earlyRedemptionPrice, int time) {
         this.id = id;
         this.earlyRedemptionPrice = earlyRedemptionPrice;
+        this.time = time;
     }
 
     public String getId() {
@@ -28,6 +30,10 @@ public abstract class Bond {
         }
 
         return 0;
+    }
+
+    public int getTime() {
+        return time;
     }
 
     public Document toDocument() {
