@@ -6,6 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import org.controlsfx.control.SearchableComboBox?>
 <TitledPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.github.dysnomya.wizualizatorobligacji.controllers.BondViewController"
@@ -15,7 +16,7 @@
     <VBox spacing="10">
         <HBox spacing="10">
             <Label text="Wybierz obligację:"/>
-            <ComboBox fx:id="investmentDropdown" onAction="#handleComboBox"/>
+            <SearchableComboBox fx:id="investmentDropdown" onAction="#handleComboBox"/>
         </HBox>
         <HBox spacing="10">
             <Label text="Liczba wykupionych obligacji:"/>
