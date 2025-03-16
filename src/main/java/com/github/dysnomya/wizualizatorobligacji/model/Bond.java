@@ -20,17 +20,8 @@ public abstract class Bond {
         return id;
     }
 
-    public int getMonth() {
-        return Integer.parseInt(id.substring(3, 5));
-    }
-
-    public int getYear() {
-        if (id.startsWith("TOS")) {
-            return Integer.parseInt(id.substring(5, 7)) + 1997;
-        }
-
-        return 0;
-    }
+    public abstract int getMonth();
+    public abstract int getYear();
 
     public int getTime() {
         return time;
@@ -41,7 +32,7 @@ public abstract class Bond {
                 .append("earlyRedemptionPrice", earlyRedemptionPrice);
     }
 
-    public abstract double getInterestRate();
+    public abstract double[] getInterestRates();
 
     @Override
     public String toString() {

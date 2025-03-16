@@ -63,6 +63,7 @@ public class BondViewController {
     @FXML
     private void initDropdown() {
         investmentDropdown.getItems().setAll(BondDAO.getBonds("TOS"));
+        investmentDropdown.getItems().addAll(BondDAO.getBonds("COI"));
     }
 
 }

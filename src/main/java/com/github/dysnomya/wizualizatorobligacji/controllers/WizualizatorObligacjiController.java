@@ -68,28 +68,26 @@ public class WizualizatorObligacjiController {
             int count = controller.getCount();
             LocalDate date = controller.getDate();
 
-            XYChart.Series<Long, Double> series = createNewSeries(100.0 * count, bond.getInterestRate(), date, bond.getTime());
+            XYChart.Series<Long, Double> series = createNewSeries(100.0 * count, bond.getInterestRates(), date, bond.getTime());
             series.setName(bond.getId());
 
             lineChart.getData().add(series);
         }
     }
 
-
-
-    private XYChart.Series<Long, Double> createNewSeries(double base, double interestValue, LocalDate startingDate, int days) {
+    private XYChart.Series<Long, Double> createNewSeries(double base, double[] interestValue, LocalDate startingDate, int days) {
         XYChart.Series<Long, Double> series = new XYChart.Series<>();
 
-        // TODO: ADD FORMATTER
         long minDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate);
         long maxDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate.plusDays(days));
         long range = maxDate - minDate;
 
+        double value = base;
         for (int i = 0; i < range; i++) {
-            double value = base + ((double) i / 365) * (interestValue) * base;
+
+            value = value + (1.0 / 365) * (interestValue[i / 365]) * base;
             series.getData().add(new XYChart.Data<>(minDate + i, value));
 
-//            startingDate = startingDate.plusDays(1);
         }
         return series;
     }

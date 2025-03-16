@@ -10,40 +10,42 @@ import javafx.scene.control.ListView;
 
 import java.io.*;
 import java.net.*;
-import java.nio.file.Paths;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 public class ListViewController {
     @FXML private   ListView                tosBonds;
-    private         ObservableList<Bond>  names = FXCollections.observableArrayList();
+    @FXML private   ListView                coiBonds;
+    private         ObservableList<Bond>    tosNames = FXCollections.observableArrayList();
+    private         ObservableList<Bond>    coiNames = FXCollections.observableArrayList();
 
     public void setListView() {
         List<Bond> bonds = BondDAO.getBonds("TOS");
+        tosNames.setAll(bonds);
 
-        names.setAll(bonds);
+        bonds = BondDAO.getBonds("COI");
+        coiNames.setAll(bonds);
     }
 
     @FXML
     public void initialize() {
-        tosBonds.setItems(names);
+        tosBonds.setItems(tosNames);
+        coiBonds.setItems(coiNames);
         setListView();
     }
 
     @FXML
-    private String loadFromAPI() throws JSONException, IOException, URISyntaxException {
+    private void loadFromAPI() throws JSONException, IOException, URISyntaxException {
         Workbook workbook = getXMLFile();
         XMLFileReader fileReader = new XMLFileReader(workbook);
         fileReader.readSheet();
-        return "abc";
     }
 
     private Workbook getXMLFile() throws IOException, JSONException, URISyntaxException {
-        URL url = new URI("https://api.dane.gov.pl/resources/64629,sprzedaz-obligacji-detalicznych/file").toURL();
+        URL url = new URI("https://api.dane.gov.pl/resources/65327,sprzedaz-obligacji-detalicznych/file").toURL();
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
         con.connect();
