@@ -32,22 +32,8 @@ public class COI extends Bond {
     }
 
     @Override
-    public XYChart.Series<Long, Double> createNewSeries(int count, LocalDate startDate) {
-        XYChart.Series<Long, Double> series = new XYChart.Series<>();
-
-        long minDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startDate);
-        long maxDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startDate.plusDays(super.getTime()));
-        long range = maxDate - minDate;
-
-        double base = count * 100.0;
-        double value = count * 100.0;
-        for (int i = 0; i < range; i++) {
-
-            value = value + (interestRates[i/365] / 365.0) * base;
-            series.getData().add(new XYChart.Data<>(minDate + i, value));
-
-        }
-        return series;
+    public double calculateDailyInterestRate(int day) {
+        return interestRates[day/365] / 365;
     }
 
     @Override
