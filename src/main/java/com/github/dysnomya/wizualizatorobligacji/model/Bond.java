@@ -1,5 +1,6 @@
 package com.github.dysnomya.wizualizatorobligacji.model;
 
+import javafx.scene.chart.XYChart;
 import org.bson.Document;
 
 import java.time.LocalDate;
@@ -27,15 +28,18 @@ public abstract class Bond {
         return time;
     }
 
-    public Document toDocument() {
-        return new Document("id", id)
-                .append("earlyRedemptionPrice", earlyRedemptionPrice);
-    }
-
     public abstract double[] getInterestRates();
+
+    public abstract XYChart.Series<Long, Double> createNewSeries(int count, LocalDate startDate);
 
     @Override
     public String toString() {
         return id;
     }
+
+    public Document toDocument() {
+        return new Document("id", id)
+                .append("earlyRedemptionPrice", earlyRedemptionPrice);
+    }
+
 }

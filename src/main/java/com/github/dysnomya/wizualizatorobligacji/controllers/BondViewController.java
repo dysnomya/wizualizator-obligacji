@@ -2,7 +2,9 @@ package com.github.dysnomya.wizualizatorobligacji.controllers;
 
 import com.github.dysnomya.wizualizatorobligacji.database.BondDAO;
 import com.github.dysnomya.wizualizatorobligacji.model.Bond;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
@@ -13,17 +15,10 @@ import java.util.Date;
 
 public class BondViewController {
 
-    @FXML
-    private TitledPane pane;
-
-    @FXML
-    private SearchableComboBox<Bond> investmentDropdown;
-
-    @FXML
-    private TextField bondCount;
-
-    @FXML
-    private DatePicker bondDate;
+    @FXML private TitledPane                pane;
+    @FXML private SearchableComboBox<Bond>  investmentDropdown;
+    @FXML private TextField                 bondCount;
+    @FXML private DatePicker                bondDate;
 
 
     public Bond getBond() {
@@ -67,5 +62,4 @@ public class BondViewController {
         investmentDropdown.getItems().setAll(BondDAO.getBonds("TOS"));
         investmentDropdown.getItems().addAll(BondDAO.getBonds("COI"));
     }
-
 }

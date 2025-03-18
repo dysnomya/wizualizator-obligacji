@@ -28,7 +28,7 @@ public class WizualizatorObligacjiController {
     private TextField amountField;
 
     @FXML
-    private LineChart lineChart;
+    private LineChart<Long, Double> lineChart;
 
     @FXML
     private NumberAxis xAxis;
@@ -45,8 +45,8 @@ public class WizualizatorObligacjiController {
                 return date.toString();
             }
         });
-    }
 
+    }
 
     @FXML
     private void addNewBond() throws IOException {
@@ -68,28 +68,11 @@ public class WizualizatorObligacjiController {
             int count = controller.getCount();
             LocalDate date = controller.getDate();
 
-            XYChart.Series<Long, Double> series = createNewSeries(100.0 * count, bond.getInterestRates(), date, bond.getTime());
+            XYChart.Series<Long, Double> series = bond.createNewSeries(count, date);
             series.setName(bond.getId());
 
             lineChart.getData().add(series);
         }
-    }
-
-    private XYChart.Series<Long, Double> createNewSeries(double base, double[] interestValue, LocalDate startingDate, int days) {
-        XYChart.Series<Long, Double> series = new XYChart.Series<>();
-
-        long minDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate);
-        long maxDate = ChronoUnit.DAYS.between(LocalDate.of(1970, 1, 1), startingDate.plusDays(days));
-        long range = maxDate - minDate;
-
-        double value = base;
-        for (int i = 0; i < range; i++) {
-
-            value = value + (1.0 / 365) * (interestValue[i / 365]) * base;
-            series.getData().add(new XYChart.Data<>(minDate + i, value));
-
-        }
-        return series;
     }
 
 }

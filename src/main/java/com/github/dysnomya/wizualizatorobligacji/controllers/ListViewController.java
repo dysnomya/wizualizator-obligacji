@@ -17,8 +17,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.json.JSONException;
 
 public class ListViewController {
-    @FXML private   ListView                tosBonds;
-    @FXML private   ListView                coiBonds;
+    @FXML private   ListView<Bond>          tosBonds;
+    @FXML private   ListView<Bond>          coiBonds;
     private         ObservableList<Bond>    tosNames = FXCollections.observableArrayList();
     private         ObservableList<Bond>    coiNames = FXCollections.observableArrayList();
 

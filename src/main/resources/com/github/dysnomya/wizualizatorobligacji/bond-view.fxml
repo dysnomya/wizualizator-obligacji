@@ -26,5 +26,8 @@
             <Label text="Data zakupienia obligacji:"/>
             <DatePicker fx:id="bondDate"/>
         </HBox>
+        <HBox spacing="10">
+            <Label text="a"/>
+        </HBox>
     </VBox>
 </TitledPane>
