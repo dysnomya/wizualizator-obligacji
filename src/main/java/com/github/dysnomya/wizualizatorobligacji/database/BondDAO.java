@@ -2,6 +2,7 @@ package com.github.dysnomya.wizualizatorobligacji.database;
 
 import com.github.dysnomya.wizualizatorobligacji.model.Bond;
 import com.github.dysnomya.wizualizatorobligacji.model.COI;
+import com.github.dysnomya.wizualizatorobligacji.model.DOR;
 import com.github.dysnomya.wizualizatorobligacji.model.TOS;
 
 import com.mongodb.client.FindIterable;
@@ -49,6 +50,12 @@ public class BondDAO {
                         .mapToDouble(Double::parseDouble)
                         .toArray();
                 bonds.add(new COI(id, earlyRedemptionPrice, interestRate));
+            } else if (id.startsWith("DOR")) {
+                double[] interestRate = Arrays.stream(doc.getString("interestRate").split(";"))
+                        .mapToDouble(Double::parseDouble)
+                        .toArray();
+
+                bonds.add((new DOR(id, earlyRedemptionPrice, interestRate)));
             }
         }
 

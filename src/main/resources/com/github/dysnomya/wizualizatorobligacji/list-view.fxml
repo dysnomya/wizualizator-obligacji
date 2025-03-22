@@ -18,6 +18,9 @@
             <Tab text="COI">
                 <ListView fx:id="coiBonds"/>
             </Tab>
+            <Tab text="DOR">
+                <ListView fx:id="dorBonds"/>
+            </Tab>
         </TabPane>
 
     </center>

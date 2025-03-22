@@ -1,15 +1,10 @@
 package com.github.dysnomya.wizualizatorobligacji.model;
 
-
-import javafx.scene.chart.XYChart;
 import org.bson.Document;
-
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 public class TOS extends Bond {
 
-    private double interestRate;
+    private final double interestRate;
 
     public TOS(String id, double earlyRedemptionPrice, double interestRate) {
         super(id, earlyRedemptionPrice, 365 * 3);

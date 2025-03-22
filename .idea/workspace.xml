@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Moved creating new series to responsible classes">
+    <list default="true" id="44e78220-f83f-4b0e-bcde-3e6dd862af20" name="Changes" comment="Removed repetitions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/DOR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/BondViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/BondViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/ListViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/controllers/ListViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/BondDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/BondDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/XMLFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/database/XMLFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Bond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/Bond.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/COI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/COI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dysnomya/wizualizatorobligacji/model/TOS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/dysnomya/wizualizatorobligacji/list-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +143,11 @@
       <workItem from="1741899741382" duration="8000" />
       <workItem from="1741975545131" duration="851000" />
       <workItem from="1742126448875" duration="12471000" />
-      <workItem from="1742322880391" duration="2547000" />
+      <workItem from="1742322880391" duration="2695000" />
+      <workItem from="1742326944991" duration="5000" />
+      <workItem from="1742658675035" duration="1838000" />
+      <workItem from="1742672495541" duration="87000" />
+      <workItem from="1742672748267" duration="623000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <option name="closed" value="true" />
@@ -307,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742324983049</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Removed repetitions">
+      <option name="closed" value="true" />
+      <created>1742325478836</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1742325478836</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +351,8 @@
     <MESSAGE value="Added COI bonds" />
     <MESSAGE value="Changed comboBox for picking bonds to be searchableComboBox" />
     <MESSAGE value="Moved creating new series to responsible classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved creating new series to responsible classes" />
+    <MESSAGE value="Removed repetitions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed repetitions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wizualizator_obligacji$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1741439459834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python" />

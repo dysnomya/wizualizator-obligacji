@@ -19,8 +19,10 @@ import org.json.JSONException;
 public class ListViewController {
     @FXML private   ListView<Bond>          tosBonds;
     @FXML private   ListView<Bond>          coiBonds;
+    @FXML private   ListView<Bond>          dorBonds;
     private         ObservableList<Bond>    tosNames = FXCollections.observableArrayList();
     private         ObservableList<Bond>    coiNames = FXCollections.observableArrayList();
+    private         ObservableList<Bond>    dorNames = FXCollections.observableArrayList();
 
     public void setListView() {
         List<Bond> bonds = BondDAO.getBonds("TOS");
@@ -28,12 +30,16 @@ public class ListViewController {
 
         bonds = BondDAO.getBonds("COI");
         coiNames.setAll(bonds);
+
+        bonds = BondDAO.getBonds("DOR");
+        dorNames.setAll(bonds);
     }
 
     @FXML
     public void initialize() {
         tosBonds.setItems(tosNames);
         coiBonds.setItems(coiNames);
+        dorBonds.setItems(dorNames);
         setListView();
     }
 

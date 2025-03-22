@@ -8,9 +8,9 @@ import java.time.temporal.ChronoUnit;
 
 
 public abstract class Bond {
-    private String id;
-    private double earlyRedemptionPrice;
-    private int time;
+    private final String id;
+    private final double earlyRedemptionPrice;
+    private final int time;
 
     public Bond(String id, double earlyRedemptionPrice, int time) {
         this.id = id;
@@ -25,14 +25,7 @@ public abstract class Bond {
     public abstract int getMonth();
     public abstract int getYear();
 
-    public int getTime() {
-        return time;
-    }
-
-    public abstract double[] getInterestRates();
-
     public abstract double calculateDailyInterestRate(int day);
-
 
     public XYChart.Series<Long, Double> createNewSeries(int count, LocalDate startDate) {
         XYChart.Series<Long, Double> series = new XYChart.Series<>();

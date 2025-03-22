@@ -1,16 +1,13 @@
 package com.github.dysnomya.wizualizatorobligacji.model;
 
-import javafx.scene.chart.XYChart;
 import org.bson.Document;
 
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class COI extends Bond {
 
-    private double[] interestRates;
+    private final double[] interestRates;
 
     public COI(String id, double earlyRedemptionPrice, double[] interestRates) {
         super(id, earlyRedemptionPrice, 365 * 4);
